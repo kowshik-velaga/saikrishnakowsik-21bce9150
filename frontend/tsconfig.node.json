@@ -1,0 +1,31 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "vite.config.ts",
+    "vitest.config.ts",
+    "cypress.config.ts",
+    "nightwatch.conf.ts",
+    "playwright.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "ESNext",  // Specify target ES version
+    "lib": ["ESNext", "DOM"],  // Include relevant libraries
+    "types": ["node"],  // Include node types
+    "esModuleInterop": true,  // Enable interoperability with CommonJS modules
+    "skipLibCheck": true,  // Skip type checking of declaration files
+    "strict": true  // Enable strict type-checking options
+  }
+}
